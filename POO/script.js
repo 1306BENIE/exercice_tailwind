@@ -21,9 +21,27 @@ const person2 = new Person("Sylvestre", 24);
 console.log(person1.introduce());
 console.log(person2.introduce());
 
+/* Exercice 2
+HERITAGE avec la classe employé
+1. creer une classe employé qui herite de la classe personne
+2 ajouter une propriété jobtitle à employé
+3 ajouté une methode appellé work qui affiche name travail en tant que jobtitle
+*/
 
+class Employee extends Person{
+    constructor(name, age, jobTitle){
+        super(name, age);
+        this.jobTitle = jobTitle;
+    }
+    
+    work(){
+        console.log(`${this.name} travail en tant que ${this.jobTitle}`);
+    }
+}
 
+const employee1 = new Employee("BENIE", 30, "Developpeur");
 
+console.log(employee1.work());
 
 
 
