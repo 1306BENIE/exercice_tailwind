@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="h-screen md:flex items-center justify-center">
+  <div class="grid grid-cols-1 md:grid-cols-3 grid-flow-row w-3xl mx-10">
+    <div class="bg-[#E28525] p-8 max-w-[400px] rounded-l-lg">
+      <div>
+        <img src="./images/icon-sedans.svg" alt="sedans">
+        <h1 class="text-white text-2xl mb-8 mt-5 uppercase">sedans</h1>
+        <P class="text-white mb-12">
+          choose a sedon for its <br> affrondability and excellent <br> fuel economy. Ideal for crusing in the city or an <br>
+          your next road trip 
+        </P>
+      </div>
+      <div>
+        <button class="bg-white border-2 border-white p-2 pr-3 pl-3 mt-5 rounded-full text-[#E28525] hover:bg-[#E28525] hover:text-white">Learn More</button>
+      </div>
+    </div>
+    <div class="bg-[#016972] p-8 max-w-[400px]">
+      <div>
+        <img src="./images/icon-suvs.svg" alt="suvs">
+        <h1 class="text-white text-2xl mb-8 mt-5 uppercase">suvs</h1>
+        <P class="text-white mb-12">
+          choose a sedon for its <br> affrondability and excellent <br> fuel economy. Ideal for crusing in the city or an <br>
+          your next road trip 
+        </P>
+      </div>
+      <div>
+        <button class="bg-white border-2 border-white p-2 pr-3 pl-3 mt-5 rounded-full text-[#016972] hover:bg-[#016972] hover:text-white">Learn More</button>
+      </div>
+    </div>
+    <div class="bg-[#00403F] p-8 max-w-[400px] rounded-r-lg">
+      <div>
+        <img src="./images/icon-luxury.svg" alt="luxury">
+        <h1 class="text-white text-2xl mb-8 mt-5 uppercase">luxury</h1>
+        <P class="text-white mb-12">
+          choose a sedon for its <br> affrondability and excellent <br> fuel economy. Ideal for crusing in the city or an <br>
+          your next road trip 
+        </P>
+      </div>
+      <div>
+        <button class="bg-white border-2 border-white p-2 pr-3 pl-3 mt-5 rounded-full text-[#00403F] hover:bg-[#00403F] hover:text-white">Learn More</button>
+      </div>
+    </div>
+  </div>
+  <div class="attribution fixed bottom-0 ">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
