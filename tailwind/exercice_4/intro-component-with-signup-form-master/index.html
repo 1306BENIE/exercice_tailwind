@@ -1,50 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hwb(246 5% 10%); }
-  </style>
-</head>
-<body>
-  <main class="bg-[#FF7978] bg-[url(./images/bg-intro-desktop.png)] h-screen opacity-75 flex items-center justify-center overflow-hidden">
-    
-      <div class="border-2 border-indigo-600">
-        <h1 class="text-white text-2xl font-extrabold">Learn to code by watching others</h1>
-        <p  class="text-white">See how experienced developers solve problems in real-time. <br>
-        watching scripted tutorials is great, but underlanding how <br>
-        developpers think is invaluable.</p>
-      </div>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
 
-      <div class="border-2 border-indigo-600">
-        <p class="text-white text-center">
-          <a href="#" class="bg-[#5D55A2] text-white"> <span>Try it free 7 days</span> then $20/mo. thererealter </a>
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <style type="text/tailwindcss">
+    @theme {
+    --color-primary-red: hsl(0, 100%, 74%);
+    --color-primary-green: hsl(154, 59%, 51%);
+
+    --color-accent-blue: hsl(248, 32%, 49%);
+
+    --color-neutral-dark:hsl(249, 10%, 26%);
+    --color-neutral-blue:hsl(246, 25%, 77%);
+  }
+</style>
+</head>
+
+<body class="bg-primary-red md:bg-[url(images/bg-intro-desktop.png)] bg-[url(images/bg-intro-mobile.png)] h-screen">
+
+  <main class="p-10 lg:w-[70rem] m-auto">
+    <article class="grid lg:grid-cols-2 grid-cols-1 md:my-40 my-10 gap-5">
+      <!-- title and description -->
+      <section class="flex justify-center flex-col md:text-left text-center">
+        <p class="text-5xl text-white font-bold">Learn to code by watching others</p>
+        <p class="my-5 text-white opacity-75">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.
         </p>
-        
-        <form>
-          <input class="border-1 border-black-600" type="text" id="firstName" placeholder="Jonathan |" required><br>
-          <input class="border-1 border-black-600" type="text" id="lastName" placeholder="Last Name" required><br>
-          <input class="border-1 border-black-600" type="password" id="password" placeholder="Create a password" required><br>
-          <input class="border-1 border-black-600" type="email" id="email" placeholder="Email Adress" required><br>
-          <button type="submit">CLAIM YOUR FREE TRIAL</button>
-        </form>
-        <P>By clicking the button, you are agroing to our <span>Terms and Services</span></P>
-      </div>
+      </section>
+
+      <section class="flex flex-col gap-5">
+        <!-- price -->
+        <div class="bg-accent-blue text-white font-semibold text-center py-4 rounded-lg px-4">
+          Try it free 7 days <span class="text-neutral-blue">then $20/mo. thereafter</span>
+        </div>
+
+        <!-- forms -->
+        <div class="bg-white rounded-lg shadow-xl p-10 flex flex-col gap-4 shadow-lg">
+          <div class="w-full">
+            <input type="text" placeholder="First Name"
+              class="w-full py-4 px-5 border border-zinc-400 outline-none rounded-sm focus:border-accent-blue">
+          </div>
+
+          <div class="w-full">
+            <input type="text" placeholder="Last Name"
+              class="w-full py-4 px-5 border border-zinc-400 outline-none rounded-sm focus:border-accent-blue">
+          </div>
+
+          <div class="w-full">
+            <input type="text" placeholder="Email Address"
+              class="w-full py-4 px-5 border border-zinc-400 outline-none rounded-sm focus:border-accent-blue">
+          </div>
+
+          <div class="w-full">
+            <input type="text" placeholder="Password"
+              class="w-full py-4 px-5 border border-zinc-400 outline-none rounded-sm focus:border-accent-blue">
+          </div>
+
+          <!-- submit button -->
+          <div class="w-full">
+            <button
+              class="text-center bg-primary-green py-3 w-full cursor-pointer hover:opacity-75 hover:shadow-lg transition-all duration-300 uppercase text-white rounded-md shadow-md">Claim
+              your free
+              trial</button>
+          </div>
+
+          <!-- information -->
+          <div class="w-full text-center">
+            <p class="text-neutral-blue text-[10px]">
+              By clicking the button, you are agreeing to our <span class="text-primary-red">Terms and Services</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
   </main>
-  
+
   <footer>
-    <p class="attribution fixed mb-0 text-center">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">BENIE SYLVESTRE</a>.
     </p>
   </footer>
 </body>
+
 </html>
